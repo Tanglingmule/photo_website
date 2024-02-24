@@ -91,7 +91,7 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('./img1.jpeg');
+    background-image: url('../photos/IMG_0170.jpeg');
 }
 .card[for="c2"] {
     background-image: url('./img2.jpeg');

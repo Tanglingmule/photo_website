@@ -19,7 +19,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'image_website/static',
+    BASE_DIR / '/static',
 ]
 
 # Quick-start development settings - unsuitable for production
