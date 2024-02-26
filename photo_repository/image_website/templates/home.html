@@ -7,19 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script>
+        var clickCount = 0; // Initialize click count
+        var lastCheckedCardId = ''; // Keep track of the last checked card ID
+    
         function redirectToNewPage(cardId) {
-            var card = document.getElementById(cardId, url);
-            if (card.checked) {
-                window.location.href = "new_page_url"; // Replace "new_page_url" with the URL you want to redirect to
+            var card = document.getElementById(cardId);
+            var url = ''; // Define URL variable
+            
+            if (cardId == 'c1') {
+                url = 'gallery';
+            }
+            
+            // Check if the card is checked and it's the same as the last checked one
+            if (card.checked && cardId === lastCheckedCardId) {
+                // Increment click count
+                clickCount++;
+            } else {
+                // Reset click count if the card is not checked or it's a different card
+                clickCount = 0;
+            }
+            
+            // Update the last checked card ID
+            lastCheckedCardId = cardId;
+    
+            // Check if click count is 1
+            if (clickCount <= 1) {
+                window.location.href = url; // Redirect to the new page
+                clickCount = 0; // Reset click count
             }
         }
     </script>
+    
     <title>Main Page</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
-            <input type="radio" name="slide" id="c1" checked onclick="redirectToNewPage('c1', 'new_page_url')">
+            <input type="radio" name="slide" id="c1" checked onclick="redirectToNewPage('c1')">
             <label for="c1" class="card">
                 <div class="row">
                     <div class="icon">1</div>
