@@ -31,7 +31,7 @@
             lastCheckedCardId = cardId;
     
             // Check if click count is 1
-            if (clickCount <= 1) {
+            if (clickCount >= 2) {
                 window.location.href = url; // Redirect to the new page
                 clickCount = 0; // Reset click count
             }
