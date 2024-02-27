@@ -16,6 +16,8 @@
             
             if (cardId == 'c1') {
                 url = 'gallery';
+            }else if (cardId == 'c2') {
+                url = 'gallerytwo';
             }
             
             // Check if the card is checked and it's the same as the last checked one
@@ -53,7 +55,7 @@
                     </div>
                 </div>
             </label>
-            <input type="radio" name="slide" id="c2" >
+            <input type="radio" name="slide" id="c2" checked onclick="redirectToNewPage('c2')">
             <label for="c2" class="card">
                 <div class="row">
                     <div class="icon">2</div>

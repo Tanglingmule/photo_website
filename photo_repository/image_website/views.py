@@ -10,3 +10,6 @@ def home(request):
 
 def gallery_one(request):
     return render(request, 'gallery_one.html')
+
+def gallery_two(request):
+    return render(request, 'gallery_two.html')
