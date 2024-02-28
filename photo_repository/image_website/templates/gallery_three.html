@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Gallery</title>
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}"> 
+    <script src="{% static 'javascript/bokeh.js' %}" type="module" defer></script> <!-- Use type="module" -->
+    <style>
+        body, html, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  overflow: hidden;
+  touch-action: pan-up;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+#app a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#app canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Tokyo</h1>
+    <div id="app">
+        <canvas id="webgl-canvas"></canvas>
+        <div id="hero">
+        </div>
+    </div>
+      
+    <div class="gallery">
+        <input type="checkbox" >
+        <img src="https://images.unsplash.com/photo-1554797589-7241bb691973?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW98ZW58MHx8MHx8fDA%3D" alt="Tokyo Back Street">
+        <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRva3lvfGVufDB8fDB8fHww" alt="Tokyo Housing District">
+        <img src="https://images.unsplash.com/photo-1546418172-c847dca93195?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hpYnV5YSUyMGNyb3NzaW5nfGVufDB8fDB8fHww" alt="Shibuya crossing">
+        <img src="https://media.istockphoto.com/id/1283529752/photo/cherry-blossom-and-building-at-asakusa-sumida-park.jpg?s=612x612&w=0&k=20&c=KcJYcbUprfPjDL_jtShQ6m60Mkz5wedFcIDFIY50Hhw=" alt="Tokyo Skytree">
+        <img src="https://media.istockphoto.com/id/109836388/photo/sushi.jpg?s=612x612&w=0&k=20&c=hxJOXWEAq1V_9r8EHf26zgvShv26GbhMhlVzgTgv8cw=" alt="Sushi at a restaurant">
+        <img src="https://media.istockphoto.com/id/1133974869/photo/traditional-red-torii-gates-hei-jinja-shrine-panorama-akasaka-tokyo-japan.jpg?s=612x612&w=0&k=20&c=EoncDomvAxpq6AMJG3SSsY1HBESIl9R-w1-rKwogDiM=" alt="Torii Gates">
+        <img src="https://media.istockphoto.com/id/484915982/photo/akihabara-tokyo.jpg?s=612x612&w=0&k=20&c=kbCRYJS5vZuF4jLB3y4-apNebcCEkWnDbKPpxXdf9Cg=" alt="akihabara-tokyo">
+        <img src="https://media.istockphoto.com/id/505797368/photo/shibuya-shopping-district-tokyo-japan.jpg?s=612x612&w=0&k=20&c=pTHiEWd4MQqU3e7lWbxA-Eb73VG4D5Uz7AvbeNYHKLg=" alt="shibuya shopping district">
+        <img src="https://media.istockphoto.com/id/1451243904/photo/items-displayed-at-a-flea-market.jpg?s=612x612&w=0&k=20&c=7hGRwxwjIKOJfE0fXnw1BoEQ7_6vTlU_W3kB2MNXF_I=" alt="neko">
+      </div>
+</body>
+</html>

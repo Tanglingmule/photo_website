@@ -97,8 +97,27 @@ input:checked + label .description {
     background-image: url('./img2.jpeg');
 }
 .card[for="c3"] {
-    background-image: url('./img3.jpeg');
+    background-image: url('https://sakura.co/wp-content/uploads/2023/03/sakuraco_sakura-poetry-thumbnail.png');
 }
 .card[for="c4"] {
     background-image: url('./img4.jpeg');
+}
+
+h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #5b5b5f;
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 5px #b0b0ba;
+    user-select: none;
+    cursor: default;
+    margin: 0;
+    transition: all .3s ease;
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.5s;
 }

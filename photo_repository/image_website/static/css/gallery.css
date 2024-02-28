@@ -1,5 +1,5 @@
 .gallery {
-    --s: 130px; /* control the size of the images*/
+    --s: 200px; /* control the size of the images*/
     
     display: grid;
     grid-template-columns: repeat(3,auto);
@@ -56,5 +56,25 @@
     min-height: 100vh;
     display: grid;
     place-content: center;
-    background: #c8bace;
   }
+
+  h1{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #5b5b5f;
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 5px #b0b0ba;
+    user-select: none;
+    cursor: default;
+    margin: 0;
+    transition: all .3s ease;
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.5s;
+}
+

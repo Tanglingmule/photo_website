@@ -13,3 +13,6 @@ def gallery_one(request):
 
 def gallery_two(request):
     return render(request, 'gallery_two.html')
+
+def gallery_three(request):
+    return render(request, 'gallery_three.html')
